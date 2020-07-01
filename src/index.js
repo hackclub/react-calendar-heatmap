@@ -239,14 +239,13 @@ class CalendarHeatmap extends React.Component {
         height={SQUARE_SIZE}
         x={x}
         y={y}
+        title={this.getTitleForIndex(index)}
         className={this.getClassNameForIndex(index)}
         onClick={() => this.handleClick(value)}
         onMouseOver={(e) => this.handleMouseOver(e, value)}
         onMouseLeave={(e) => this.handleMouseLeave(e, value)}
         {...this.getTooltipDataAttrsForIndex(index)}
-      >
-        <title>{this.getTitleForIndex(index)}</title>
-      </rect>
+      />
     )
     const { transformDayElement } = this.props
     return transformDayElement ? transformDayElement(rect, value, index) : rect
