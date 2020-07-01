@@ -1,3 +1,5 @@
+_This is a fork of [the original](http://github.com/kevinsqi/react-calendar-heatmap) with a few bug fixes & improvements._
+
 # React Calendar Heatmap
 
 A calendar heatmap component built on SVG, inspired by github's commit calendar graph. The component expands to size of container and is super configurable. [**Try it out on CodeSandbox**](https://codesandbox.io/s/73mk9wlyx).
@@ -6,14 +8,14 @@ A calendar heatmap component built on SVG, inspired by github's commit calendar 
 [![Build Status](https://travis-ci.org/kevinsqi/react-calendar-heatmap.svg?branch=master)](https://travis-ci.org/kevinsqi/react-calendar-heatmap)
 [![bundle size](https://img.shields.io/bundlephobia/min/react-calendar-heatmap.svg)](https://bundlephobia.com/result?p=react-calendar-heatmap)
 
-[![react-calendar-heatmap screenshot](/demo/public/react-calendar-heatmap.png?raw=true)](https://codesandbox.io/s/73mk9wlyx)
+[![react-calendar-heatmap screenshot](/demo/public/react-calendar-heatmap.jpg?raw=true)](https://codesandbox.io/s/73mk9wlyx)
 
 ## Setup
 
 Install the npm module with yarn or npm:
 
 ```bash
-yarn add react-calendar-heatmap
+yarn add @hackclub/react-calendar-heatmap
 ```
 
 ## Usage
@@ -21,13 +23,13 @@ yarn add react-calendar-heatmap
 Import the component:
 
 ```javascript
-import CalendarHeatmap from 'react-calendar-heatmap'
+import CalendarHeatmap from '@hackclub/react-calendar-heatmap'
 ```
 
 Import styles. You can directly import from the module, which requires a CSS loader:
 
 ```javascript
-import 'react-calendar-heatmap/dist/styles.css'
+import '@hackclub/react-calendar-heatmap/dist/styles.css'
 ```
 
 A CSS loader is included by default in create-react-app. If you don't have a CSS loader, you can simply [copy the stylesheet](src/styles.css) into a file in your project and import it instead.
@@ -94,16 +96,16 @@ Then you use CSS to set colors for each class:
 
 ```css
 .react-calendar-heatmap .color-scale-1 {
-  fill: #d6e685;
+  fill: #9be9a8;
 }
 .react-calendar-heatmap .color-scale-2 {
-  fill: #8cc665;
+  fill: #40c463;
 }
 .react-calendar-heatmap .color-scale-3 {
-  fill: #44a340;
+  fill: #30a14e;
 }
 .react-calendar-heatmap .color-scale-4 {
-  fill: #1e6823;
+  fill: #216e39;
 }
 ```
 

@@ -1,6 +1,6 @@
 {
-  "name": "react-calendar-heatmap",
-  "version": "1.8.1",
+  "name": "@hackclub/react-calendar-heatmap",
+  "version": "1.8.2",
   "description": "A calendar heatmap component built on SVG, inspired by Github's commit calendar graph.",
   "author": "Kevin Qi",
   "main": "dist/react-calendar-heatmap.cjs.js",
@@ -10,7 +10,7 @@
   "files": ["dist"],
   "repository": {
     "type": "git",
-    "url": "https://github.com/kevinsqi/react-calendar-heatmap.git"
+    "url": "https://github.com/hackclub/react-calendar-heatmap.git"
   },
   "license": "MIT",
   "keywords": ["calendar", "react", "react-component", "svg"],
