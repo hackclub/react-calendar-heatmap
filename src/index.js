@@ -16,14 +16,7 @@ const CSS_PSEDUO_NAMESPACE = 'react-calendar-heatmap-'
 
 class CalendarHeatmap extends React.Component {
   getDateDifferenceInDays() {
-    const { startDate, numDays } = this.props
-    if (numDays) {
-      // eslint-disable-next-line no-console
-      console.warn(
-        'numDays is a deprecated prop. It will be removed in the next release. Consider using the startDate prop instead.',
-      )
-      return numDays
-    }
+    const { startDate } = this.props
     const timeDiff = this.getEndDate() - convertToDate(startDate)
     return Math.ceil(timeDiff / MILLISECONDS_IN_ONE_DAY)
   }
@@ -346,7 +339,6 @@ CalendarHeatmap.propTypes = {
         .isRequired,
     }).isRequired,
   ).isRequired, // array of objects with date and arbitrary metadata
-  numDays: PropTypes.number, // number of days back from endDate to show
   startDate: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.instanceOf(Date)]), // start of date range
   endDate: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.instanceOf(Date)]), // end of date range
   gutterSize: PropTypes.number, // size of space between squares
@@ -366,7 +358,6 @@ CalendarHeatmap.propTypes = {
 }
 
 CalendarHeatmap.defaultProps = {
-  numDays: null,
   startDate: dateNDaysAgo(200),
   endDate: new Date(),
   gutterSize: 1,
