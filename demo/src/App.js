@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import 'react-calendar-heatmap/dist/styles.css';
-import './App.css';
-import Demo from './Demo';
+import React, { Component } from 'react'
+import 'react-calendar-heatmap/dist/styles.css'
+import './App.css'
+import Demo from './Demo'
 
 class App extends Component {
   render() {
@@ -36,8 +36,8 @@ class App extends Component {
           </div>
         </div>
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App

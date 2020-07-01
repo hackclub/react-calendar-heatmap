@@ -1,6 +1,6 @@
-export const MILLISECONDS_IN_ONE_DAY = 24 * 60 * 60 * 1000;
+export const MILLISECONDS_IN_ONE_DAY = 24 * 60 * 60 * 1000
 
-export const DAYS_IN_WEEK = 7;
+export const DAYS_IN_WEEK = 7
 
 export const MONTH_LABELS = [
   'Jan',
@@ -15,6 +15,6 @@ export const MONTH_LABELS = [
   'Oct',
   'Nov',
   'Dec',
-];
+]
 
-export const DAY_LABELS = ['', 'Mon', '', 'Wed', '', 'Fri', ''];
+export const DAY_LABELS = ['', 'Mon', '', 'Wed', '', 'Fri', '']

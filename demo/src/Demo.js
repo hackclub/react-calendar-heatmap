@@ -1,23 +1,23 @@
-import React from 'react';
-import CalendarHeatmap from 'react-calendar-heatmap';
-import ReactTooltip from 'react-tooltip';
+import React from 'react'
+import CalendarHeatmap from 'react-calendar-heatmap'
+import ReactTooltip from 'react-tooltip'
 
 function shiftDate(date, numDays) {
-  const newDate = new Date(date);
-  newDate.setDate(newDate.getDate() + numDays);
-  return newDate;
+  const newDate = new Date(date)
+  newDate.setDate(newDate.getDate() + numDays)
+  return newDate
 }
 
 function getRange(count) {
-  const arr = [];
+  const arr = []
   for (let idx = 0; idx < count; idx += 1) {
-    arr.push(idx);
+    arr.push(idx)
   }
-  return arr;
+  return arr
 }
 
 function getRandomInt(min, max) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
+  return Math.floor(Math.random() * (max - min + 1)) + min
 }
 
 function generateRandomValues(count, date = new Date()) {
@@ -25,35 +25,35 @@ function generateRandomValues(count, date = new Date()) {
     return {
       date: shiftDate(date, -index),
       count: getRandomInt(1, 3),
-    };
-  });
+    }
+  })
 }
 
 class Demo extends React.Component {
   state = {
     values: generateRandomValues(200),
-  };
+  }
 
   generateValues = () => {
     this.setState({
       values: generateRandomValues(200),
-    });
-  };
+    })
+  }
 
   getTooltipDataAttrs = (value) => {
     // Temporary hack around null value.date issue
     if (!value || !value.date) {
-      return null;
+      return null
     }
     // Configuration for react-tooltip
     return {
       'data-tip': `${value.date.toISOString().slice(0, 10)} has count: ${value.count}`,
-    };
-  };
+    }
+  }
 
   handleClick = (value) => {
-    alert(`You clicked on ${value.date.toISOString().slice(0, 10)} with count: ${value.count}`);
-  };
+    alert(`You clicked on ${value.date.toISOString().slice(0, 10)} with count: ${value.count}`)
+  }
 
   render() {
     return (
@@ -64,9 +64,9 @@ class Demo extends React.Component {
               values={this.state.values}
               classForValue={(value) => {
                 if (!value) {
-                  return 'color-empty';
+                  return 'color-empty'
                 }
-                return `color-github-${value.count}`;
+                return `color-github-${value.count}`
               }}
               tooltipDataAttrs={this.getTooltipDataAttrs}
               onClick={this.handleClick}
@@ -77,9 +77,9 @@ class Demo extends React.Component {
               values={this.state.values}
               classForValue={(value) => {
                 if (!value) {
-                  return 'color-empty';
+                  return 'color-empty'
                 }
-                return `color-gitlab-${value.count}`;
+                return `color-gitlab-${value.count}`
               }}
               tooltipDataAttrs={this.getTooltipDataAttrs}
               onClick={this.handleClick}
@@ -93,8 +93,8 @@ class Demo extends React.Component {
         </div>
         <ReactTooltip />
       </div>
-    );
+    )
   }
 }
 
-export default Demo;
+export default Demo
